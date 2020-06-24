@@ -51,13 +51,13 @@ func TestModuleCreatesBucket(t *testing.T) {
 
 	unauthorisedSess := session.Must(session.NewSession())
 	unauthorisedCredentials := stscreds.NewCredentials(unauthorisedSess, unauthorisedRoleARN)
-	s3Client := s3.New(unauthorisedSess, &aws.Config{Credentials: unauthorisedCredentials})
+	s3Client := s3.New(unauthorisedSess, &aws.Config{Credentials: unauthorisedCredentials, Region: aws.String(region)})
 
 	assertUnauthorisedUserFailsBucketWrite(t, s3Client, params)
 
 	sess := session.Must(session.NewSession())
 	credentials := stscreds.NewCredentials(sess, testingRoleARN)
-	authenticatedS3Client := s3.New(sess, &aws.Config{Credentials: credentials})
+	authenticatedS3Client := s3.New(sess, &aws.Config{Credentials: credentials, Region: aws.String(region)})
 
 	fmt.Println("Assumed role: " + testingRoleARN)
 	assertAuthorisedUserBucketWrite(t, authenticatedS3Client, params)
