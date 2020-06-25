@@ -1,3 +1,10 @@
+## [1.0.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.0.0...v1.0.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* corrected the test name ([b8e718d](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/b8e718dfdf8f62c05cdbdd274ca8c9c6b4055d3b))
+
 # 1.0.0 (2020-06-24)
 
 
