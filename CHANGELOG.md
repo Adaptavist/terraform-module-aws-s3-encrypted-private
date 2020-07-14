@@ -1,3 +1,10 @@
+## [1.0.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.0.2...v1.0.3) (2020-07-14)
+
+
+### Bug Fixes
+
+* using terraform registry ([c759875](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/c759875f240c5874605f6c4aa833072e90787971))
+
 ## [1.0.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.0.1...v1.0.2) (2020-07-02)
 
 
