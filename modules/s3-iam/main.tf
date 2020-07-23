@@ -19,7 +19,7 @@ data "aws_iam_policy_document" "bucket_read" {
     sid    = "ListAccess"
     effect = "Allow"
     resources = [
-      "arn:aws:s3:::${var.bucket_name}"
+      "*"
     ]
     actions = [
       "s3:ListBucket",
@@ -33,7 +33,6 @@ data "aws_iam_policy_document" "bucket_read" {
       "arn:aws:s3:::${var.bucket_name}/*"
     ]
     actions = [
-      "s3:ListObject*",
       "s3:GetObject*"
     ]
   }
@@ -44,7 +43,7 @@ data "aws_iam_policy_document" "bucket_write" {
     sid    = "ListAccess"
     effect = "Allow"
     resources = [
-      "arn:aws:s3:::${var.bucket_name}"
+      "*"
     ]
     actions = [
       "s3:ListBucket",
@@ -61,7 +60,6 @@ data "aws_iam_policy_document" "bucket_write" {
     actions = [
       "s3:DeleteObject*",
       "s3:PutObject*",
-      "s3:ListObject*",
       "s3:GetObject",
       "s3:RestoreObject"
     ]
@@ -70,37 +68,28 @@ data "aws_iam_policy_document" "bucket_write" {
 
 data "aws_iam_policy_document" "console_access" {
   statement {
-    sid    = "ListBuckets"
+    sid    = "ListAccess"
     effect = "Allow"
     resources = [
       "*"
     ]
     actions = [
+      "s3:ListBucket",
+      "s3:HeadBucket",
       "s3:GetBucketLocation",
       "s3:ListAllMyBuckets"
-    ]
-  }
-  statement {
-    sid    = "ListAccess"
-    effect = "Allow"
-    resources = [
-      "arn:aws:s3:::${var.bucket_name}"
-    ]
-    actions = [
-      "s3:ListBucket",
-      "s3:HeadBucket"
     ]
   }
   statement {
     sid    = "WriteAccess"
     effect = "Allow"
     resources = [
+      "arn:aws:s3:::${var.bucket_name}",
       "arn:aws:s3:::${var.bucket_name}/*"
     ]
     actions = [
       "s3:PutObject*",
       "s3:GetObject*",
-      "s3:ListObject*",
       "s3:GetBucket*",
       "s3:DeleteObject*"
     ]

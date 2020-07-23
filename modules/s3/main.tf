@@ -28,6 +28,8 @@ resource "aws_s3_bucket" "this" {
   }
 }
 
+data "aws_caller_identity" "current" {}
+
 resource "aws_s3_bucket_policy" "this" {
   bucket = aws_s3_bucket.this.id
   policy = <<POLICY
@@ -69,6 +71,17 @@ resource "aws_s3_bucket_policy" "this" {
         "Null": {
           "s3:x-amz-server-side-encryption": "true"
         }
+      }
+    },
+    {
+      "Sid": "Allow bucket list",
+      "Action": "s3:ListBucket",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}",
+      "Principal": {
+        "AWS": [
+          "${data.aws_caller_identity.current.account_id}"
+        ]
       }
     }
   ]
