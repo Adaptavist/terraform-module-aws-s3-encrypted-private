@@ -53,7 +53,7 @@ resource "aws_s3_bucket_policy" "this" {
       "Sid": "DenyIncorrectEncryptionHeader",
       "Effect": "Deny",
       "Principal": "*",
-      "Action": "s3:*Object",
+      "Action": "s3:PutObject",
       "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
       "Condition": {
         "StringNotEquals": {
@@ -65,7 +65,7 @@ resource "aws_s3_bucket_policy" "this" {
       "Sid": "DenyUnEncryptedObjectActions",
       "Effect": "Deny",
       "Principal": "*",
-      "Action": "s3:*Object",
+      "Action": "s3:PutObject",
       "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
       "Condition": {
         "Null": {

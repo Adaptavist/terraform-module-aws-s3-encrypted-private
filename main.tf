@@ -35,6 +35,7 @@ module "s3" {
 module "s3-iam-roles" {
   source      = "./modules/s3-iam"
   bucket_name = module.s3.bucket_name
+  kms_key_arn = module.kms.key_arn
 }
 
 

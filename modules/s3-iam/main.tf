@@ -36,6 +36,16 @@ data "aws_iam_policy_document" "bucket_read" {
       "s3:GetObject*"
     ]
   }
+  statement {
+    sid    = "DecryptAccess"
+    effect = "Allow"
+    resources = [
+      var.kms_key_arn
+    ]
+    actions = [
+      "kms:Decrypt"
+    ]
+  }
 }
 
 data "aws_iam_policy_document" "bucket_write" {
@@ -62,6 +72,17 @@ data "aws_iam_policy_document" "bucket_write" {
       "s3:PutObject*",
       "s3:GetObject",
       "s3:RestoreObject"
+    ]
+  }
+  statement {
+    sid    = "DecryptAccess"
+    effect = "Allow"
+    resources = [
+      var.kms_key_arn
+    ]
+    actions = [
+      "kms:Decrypt",
+      "kms:Encrypt"
     ]
   }
 }
@@ -92,6 +113,17 @@ data "aws_iam_policy_document" "console_access" {
       "s3:GetObject*",
       "s3:GetBucket*",
       "s3:DeleteObject*"
+    ]
+  }
+  statement {
+    sid    = "DecryptAccess"
+    effect = "Allow"
+    resources = [
+      var.kms_key_arn
+    ]
+    actions = [
+      "kms:Decrypt",
+      "kms:Encrypt"
     ]
   }
 }
