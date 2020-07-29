@@ -35,3 +35,4 @@ This module defines a private encrypted S3 bucket. Created resources are:
 | s3_admin_policy_arn          | IAM Policy ARN allowing admin access                              |
 | s3_console_access_policy_arn | IAM Policy ARN allowing console access                            |
 
+
