@@ -22,10 +22,6 @@ variable "bucket_suffix" {
   description = "Name of the bucket to be created"
 }
 
-variable "bucket_region" {
-  type = string
-}
-
 variable "kms_user_role_arns" {
   description = "List of IAM Role ARNs that will be allowed to use the key"
   type        = list(string)

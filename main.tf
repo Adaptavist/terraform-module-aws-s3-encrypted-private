@@ -22,14 +22,13 @@ module "kms" {
 }
 
 module "s3" {
-  source        = "./modules/s3"
-  namespace     = var.namespace
-  stage         = var.stage
-  name          = var.name
-  tags          = var.tags
-  bucket_name   = var.bucket_suffix
-  bucket_region = var.bucket_region
-  kms_key_arn   = module.kms.key_arn
+  source      = "./modules/s3"
+  namespace   = var.namespace
+  stage       = var.stage
+  name        = var.name
+  tags        = var.tags
+  bucket_name = var.bucket_suffix
+  kms_key_arn = module.kms.key_arn
 }
 
 module "s3-iam-roles" {

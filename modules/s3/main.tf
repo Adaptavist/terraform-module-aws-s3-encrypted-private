@@ -11,7 +11,6 @@ module "labels" {
 resource "aws_s3_bucket" "this" {
   bucket = "${module.labels.id}-${var.bucket_name}"
   acl    = "private"
-  region = var.bucket_region
   tags   = module.labels.tags
 
   versioning {
