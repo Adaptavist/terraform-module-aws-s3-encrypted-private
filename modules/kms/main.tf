@@ -1,7 +1,7 @@
 
 module "labels" {
   source  = "cloudposse/label/terraform"
-  version = "0.4.0"
+  version = "0.5.1"
 
   namespace = var.namespace
   stage     = var.stage
