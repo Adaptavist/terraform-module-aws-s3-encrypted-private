@@ -9,7 +9,7 @@ module "labels" {
 }
 
 resource "aws_s3_bucket" "this" {
-  bucket = "${module.labels.id}-${var.bucket_name}"
+  bucket = var.use_bucket_suffix_as_name ? var.bucket_name : "${module.labels.id}-${var.bucket_name}"
   acl    = "private"
   tags   = module.labels.tags
 

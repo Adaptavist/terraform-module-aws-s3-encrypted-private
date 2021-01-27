@@ -25,3 +25,7 @@ variable "bucket_name" {
 variable "kms_key_arn" {
   type = string
 }
+
+variable "use_bucket_suffix_as_name" {
+  type = bool
+}

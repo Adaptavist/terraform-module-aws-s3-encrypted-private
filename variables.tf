@@ -32,3 +32,9 @@ variable "kms_admin_role_arns" {
   type        = list(string)
   description = "List of IAM Role ARNs that will be allowed to administer the key"
 }
+
+variable "use_bucket_suffix_as_name" {
+  type        = bool
+  default     = false
+  description = "Indicates if labels module should not be used to generate the bucket name"
+}
