@@ -1,3 +1,10 @@
+## [1.1.4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.3...v1.1.4) (2021-01-27)
+
+
+### Bug Fixes
+
+* added option to bypass the labels module ([9c91e26](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/9c91e2674a0cf3e2885ba3cacc1438f81e442b70))
+
 ## [1.1.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.2...v1.1.3) (2021-01-20)
 
 
