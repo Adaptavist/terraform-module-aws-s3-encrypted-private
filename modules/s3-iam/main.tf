@@ -75,14 +75,15 @@ data "aws_iam_policy_document" "bucket_write" {
     ]
   }
   statement {
-    sid    = "DecryptAccess"
+    sid    = "EncryptAccess"
     effect = "Allow"
     resources = [
       var.kms_key_arn
     ]
     actions = [
       "kms:Decrypt",
-      "kms:Encrypt"
+      "kms:Encrypt",
+      "kms:GenerateDataKey"
     ]
   }
 }
