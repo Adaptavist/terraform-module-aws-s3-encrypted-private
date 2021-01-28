@@ -3,5 +3,5 @@ output "bucket_arn" {
 }
 
 output "bucket_name" {
-  value = "${module.labels.id}-${var.bucket_name}"
+  value = aws_s3_bucket.this.id
 }
