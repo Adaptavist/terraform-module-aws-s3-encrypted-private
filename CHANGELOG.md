@@ -1,3 +1,10 @@
+## [1.1.7](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.6...v1.1.7) (2021-01-29)
+
+
+### Bug Fixes
+
+* added star to GetObject for write policy ([3dd06dd](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/3dd06dd45ccbee8b409d2c9ce0e6d58890d88bde))
+
 ## [1.1.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.5...v1.1.6) (2021-01-28)
 
 
