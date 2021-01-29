@@ -70,7 +70,7 @@ data "aws_iam_policy_document" "bucket_write" {
     actions = [
       "s3:DeleteObject*",
       "s3:PutObject*",
-      "s3:GetObject",
+      "s3:GetObject*",
       "s3:RestoreObject"
     ]
   }
