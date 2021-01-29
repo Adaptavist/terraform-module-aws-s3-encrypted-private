@@ -1,3 +1,10 @@
+## [1.1.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.5...v1.1.6) (2021-01-28)
+
+
+### Bug Fixes
+
+* corrected bucket write permissions ([7453ee7](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/7453ee739a3f815311d2e839574f91b5e2e1d5c2))
+
 ## [1.1.5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.4...v1.1.5) (2021-01-28)
 
 
