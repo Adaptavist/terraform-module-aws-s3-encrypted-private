@@ -1,3 +1,10 @@
+## [1.1.10](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.9...v1.1.10) (2021-02-01)
+
+
+### Bug Fixes
+
+* added missing param ([4d89054](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/4d89054d8c4706fb96b392eadeb43c96f6417924))
+
 ## [1.1.9](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.8...v1.1.9) (2021-02-01)
 
 
