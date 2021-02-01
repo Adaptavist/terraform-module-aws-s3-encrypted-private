@@ -91,7 +91,7 @@ POLICY
   depends_on = [aws_s3_bucket_public_access_block.this]
 }
 
-resource "aws_s3_bucket_policy" "this" {
+resource "aws_s3_bucket_policy" "no_header" {
   count  = var.enforce_server_side_encryption_header ? 0 : 1
   bucket = aws_s3_bucket.this.id
   policy = <<POLICY
