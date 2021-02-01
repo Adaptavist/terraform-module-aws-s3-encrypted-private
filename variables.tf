@@ -38,3 +38,9 @@ variable "use_bucket_suffix_as_name" {
   default     = false
   description = "Indicates if labels module should not be used to generate the bucket name"
 }
+
+variable "enforce_server_side_encryption_header" {
+  type        = bool
+  default     = true
+  description = "Enforce clients to send s3:x-amz-server-side-encryption header"
+}

@@ -29,3 +29,7 @@ variable "kms_key_arn" {
 variable "use_bucket_suffix_as_name" {
   type = bool
 }
+
+variable "enforce_server_side_encryption_header" {
+  type = bool
+}

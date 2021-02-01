@@ -30,6 +30,7 @@ resource "aws_s3_bucket" "this" {
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket_policy" "this" {
+  count  = var.enforce_server_side_encryption_header ? 1 : 0
   bucket = aws_s3_bucket.this.id
   policy = <<POLICY
 {
@@ -69,6 +70,44 @@ resource "aws_s3_bucket_policy" "this" {
       "Condition": {
         "Null": {
           "s3:x-amz-server-side-encryption": "true"
+        }
+      }
+    },
+    {
+      "Sid": "Allow bucket list",
+      "Action": "s3:ListBucket",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}",
+      "Principal": {
+        "AWS": [
+          "${data.aws_caller_identity.current.account_id}"
+        ]
+      }
+    }
+  ]
+}
+POLICY
+
+  depends_on = [aws_s3_bucket_public_access_block.this]
+}
+
+resource "aws_s3_bucket_policy" "this" {
+  count  = var.enforce_server_side_encryption_header ? 0 : 1
+  bucket = aws_s3_bucket.this.id
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Id": "Bucket-policy-${aws_s3_bucket.this.id}",
+  "Statement": [
+    {
+      "Sid": "EnforceSSL",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*Object",
+      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
+      "Condition": {
+         "Bool": {
+            "aws:SecureTransport": false
         }
       }
     },
