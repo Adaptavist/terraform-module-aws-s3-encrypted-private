@@ -1,3 +1,10 @@
+## [1.1.8](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.7...v1.1.8) (2021-02-01)
+
+
+### Bug Fixes
+
+* optional enforcement of the server side encryption header ([c418fc6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/c418fc691e6ec941ac2db102f8923808e2f5232d))
+
 ## [1.1.7](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.6...v1.1.7) (2021-01-29)
 
 
