@@ -1,3 +1,10 @@
+## [1.1.9](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.8...v1.1.9) (2021-02-01)
+
+
+### Bug Fixes
+
+* typo ([caa111c](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/caa111cadaee0254c987c6300ae5ef563e0c327b))
+
 ## [1.1.8](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.7...v1.1.8) (2021-02-01)
 
 
