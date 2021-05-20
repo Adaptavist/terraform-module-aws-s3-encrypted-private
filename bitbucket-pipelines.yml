@@ -24,4 +24,4 @@ pipelines:
 
   branches:
     master:
-      - step: *release¥
+      - step: *release
