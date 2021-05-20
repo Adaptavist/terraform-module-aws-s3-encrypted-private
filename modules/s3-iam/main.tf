@@ -9,7 +9,7 @@ data "aws_iam_policy_document" "bucket_admin" {
       "arn:aws:s3:::${var.bucket_name}/*"
     ]
     actions = [
-      "*"
+      "s3:*"
     ]
   }
 }

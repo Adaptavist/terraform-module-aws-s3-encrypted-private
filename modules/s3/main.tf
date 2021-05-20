@@ -9,6 +9,9 @@ module "labels" {
 }
 
 resource "aws_s3_bucket" "this" {
+  #checkov:skip=CKV_AWS_18:Access logs not required
+  #checkov:skip=CKV_AWS_52:MFA delete not required
+  #checkov:skip=CKV_AWS_144:cross region replication not required
   bucket = var.use_bucket_suffix_as_name ? var.bucket_name : "${module.labels.id}-${var.bucket_name}"
   acl    = "private"
   tags   = module.labels.tags
