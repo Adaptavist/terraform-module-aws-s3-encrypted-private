@@ -1,3 +1,10 @@
+## [1.1.11](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.10...v1.1.11) (2021-05-20)
+
+
+### Bug Fixes
+
+* added checkov and semantic release image ([cf8b454](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/cf8b454c81458da3cbb37eb34d5c4a79c30a3158))
+
 ## [1.1.10](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.9...v1.1.10) (2021-02-01)
 
 
