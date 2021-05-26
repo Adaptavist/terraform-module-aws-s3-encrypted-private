@@ -6,4 +6,4 @@ plugins:
   - "@semantic-release/git"
   - "@semantic-release/release-notes-generator"
   - - "@semantic-release/exec"
-    - successCmd: git push --mirror git@github.com:Adaptavist/terraform-module-s3-encrypted-private.git
+    - successCmd: git push --mirror git@github.com:Adaptavist/terraform-module-aws-s3-encrypted-private.git
