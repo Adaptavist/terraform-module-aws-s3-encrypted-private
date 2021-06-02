@@ -34,30 +34,33 @@ data "aws_iam_policy_document" "this" {
     resources = ["*"]
   }
 
-  statement {
-    sid    = "Allow access for Key Administrators"
-    effect = "Allow"
-    principals {
-      type        = "AWS"
-      identifiers = var.admin_role_arns
+  dynamic "statement" {
+    for_each = length(var.admin_role_arns) == 0 ? [] : [true]
+    content {
+      sid    = "Allow access for Key Administrators"
+      effect = "Allow"
+      principals {
+        type        = "AWS"
+        identifiers = var.admin_role_arns
+      }
+      actions = [
+        "kms:Create*",
+        "kms:Describe*",
+        "kms:Enable*",
+        "kms:List*",
+        "kms:Put*",
+        "kms:Update*",
+        "kms:Revoke*",
+        "kms:Disable*",
+        "kms:Get*",
+        "kms:Delete*",
+        "kms:TagResource",
+        "kms:UntagResource",
+        "kms:ScheduleKeyDeletion",
+        "kms:CancelKeyDeletion"
+      ]
+      resources = ["*"]
     }
-    actions = [
-      "kms:Create*",
-      "kms:Describe*",
-      "kms:Enable*",
-      "kms:List*",
-      "kms:Put*",
-      "kms:Update*",
-      "kms:Revoke*",
-      "kms:Disable*",
-      "kms:Get*",
-      "kms:Delete*",
-      "kms:TagResource",
-      "kms:UntagResource",
-      "kms:ScheduleKeyDeletion",
-      "kms:CancelKeyDeletion"
-    ]
-    resources = ["*"]
   }
 
   dynamic "statement" {
