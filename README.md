@@ -15,7 +15,7 @@ This module defines a private encrypted S3 bucket. Created resources are:
 | bucket_suffix          | string  |         | ✓        | A unique suffix that will form part of the bucket name                                      
 | bucket_region          | string  |         | ✓        | AWS region the bucket will be deployed to                                       
 | kms_user_role_arns     | string  |         |          | List of IAM Role ARNs that will be allowed to use the KMS CMK created for this bucket                   
-| kms_admin_role_arns    | string  |         | ✓        | List of IAM Role ARNs that will be allowed to administer the KMS CMK created for this bucket                                                    
+| kms_admin_role_arns    | string  |         |          | List of IAM Role ARNs that will be allowed to administer the KMS CMK created for this bucket                                                    
 | namespace              | string  |         | ✓        | Namespace used for labeling resources                  
 | name                   | string  |         | ✓        | Name of the module / resources                         
 | stage                  | string  |         | ✓        | What staga are the resources for? staging, production? 

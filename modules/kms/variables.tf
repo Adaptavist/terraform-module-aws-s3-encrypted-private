@@ -38,4 +38,5 @@ variable "user_role_arns" {
 variable "admin_role_arns" {
   type        = list
   description = "List of IAM Role ARNs that will be allowed to administer the key"
+  default     = []
 }
