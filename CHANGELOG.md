@@ -1,3 +1,10 @@
+# [1.2.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.12...v1.2.0) (2021-06-07)
+
+
+### Features
+
+* making kms admin role optional ([1152c46](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/1152c464f60a31cf074fc5b25b45d629827795f8))
+
 ## [1.1.12](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.11...v1.1.12) (2021-05-26)
 
 
