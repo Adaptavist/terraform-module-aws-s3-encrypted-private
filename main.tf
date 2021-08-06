@@ -1,6 +1,6 @@
 module "labels" {
   source  = "cloudposse/label/terraform"
-  version = "0.5.1"
+  version = "0.8.0"
 
   namespace = var.namespace
   stage     = var.stage
@@ -38,10 +38,3 @@ module "s3-iam-roles" {
   bucket_name = module.s3.bucket_name
   kms_key_arn = module.kms.key_arn
 }
-
-
-
-
-
-
-
