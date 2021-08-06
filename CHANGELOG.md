@@ -1,3 +1,10 @@
+# [1.3.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.2.0...v1.3.0) (2021-08-06)
+
+
+### Features
+
+* labels version bump ([57f4571](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/57f45712bf79eef0f7d3fe6548b063178e61fb82))
+
 # [1.2.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.1.12...v1.2.0) (2021-06-07)
 
 
