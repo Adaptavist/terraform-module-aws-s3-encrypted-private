@@ -33,3 +33,7 @@ variable "use_bucket_suffix_as_name" {
 variable "enforce_server_side_encryption_header" {
   type = bool
 }
+
+variable "bucket_policy_source_json" {
+  type = string
+}

@@ -33,103 +33,116 @@ resource "aws_s3_bucket" "this" {
 data "aws_caller_identity" "current" {}
 
 resource "aws_s3_bucket_policy" "this" {
-  count  = var.enforce_server_side_encryption_header ? 1 : 0
-  bucket = aws_s3_bucket.this.id
-  policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Id": "Bucket-policy-${aws_s3_bucket.this.id}",
-  "Statement": [
-    {
-      "Sid": "EnforceSSL",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:*Object",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
-      "Condition": {
-         "Bool": {
-            "aws:SecureTransport": false
-        }
-      }
-    },
-    {
-      "Sid": "DenyIncorrectEncryptionHeader",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
-      "Condition": {
-        "StringNotEquals": {
-          "s3:x-amz-server-side-encryption": "aws:kms"
-        }
-      }
-    },
-    {
-      "Sid": "DenyUnEncryptedObjectActions",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
-      "Condition": {
-        "Null": {
-          "s3:x-amz-server-side-encryption": "true"
-        }
-      }
-    },
-    {
-      "Sid": "Allow bucket list",
-      "Action": "s3:ListBucket",
-      "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}",
-      "Principal": {
-        "AWS": [
-          "${data.aws_caller_identity.current.account_id}"
-        ]
-      }
-    }
-  ]
-}
-POLICY
-
+  bucket     = aws_s3_bucket.this.id
+  policy     = var.enforce_server_side_encryption_header ? data.aws_iam_policy_document.default.json : data.aws_iam_policy_document.no_header_policy.json
   depends_on = [aws_s3_bucket_public_access_block.this]
 }
 
-resource "aws_s3_bucket_policy" "no_header" {
-  count  = var.enforce_server_side_encryption_header ? 0 : 1
-  bucket = aws_s3_bucket.this.id
-  policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Id": "Bucket-policy-${aws_s3_bucket.this.id}",
-  "Statement": [
-    {
-      "Sid": "EnforceSSL",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:*Object",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}/*",
-      "Condition": {
-         "Bool": {
-            "aws:SecureTransport": false
-        }
-      }
-    },
-    {
-      "Sid": "Allow bucket list",
-      "Action": "s3:ListBucket",
-      "Effect": "Allow",
-      "Resource": "arn:aws:s3:::${aws_s3_bucket.this.id}",
-      "Principal": {
-        "AWS": [
-          "${data.aws_caller_identity.current.account_id}"
-        ]
-      }
-    }
-  ]
-}
-POLICY
+data "aws_iam_policy_document" "default" {
 
-  depends_on = [aws_s3_bucket_public_access_block.this]
+  source_json = var.bucket_policy_source_json
+
+  statement {
+    sid       = "EnforceSSL"
+    effect    = "Deny"
+    actions   = ["s3:*Object"]
+    resources = ["${aws_s3_bucket.this.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = "*"
+    }
+
+    condition {
+      test     = "Bool"
+      values   = ["false"]
+      variable = "aws:SecureTransport"
+    }
+  }
+
+  statement {
+    sid    = "DenyIncorrectEncryptionHeader"
+    effect = "Deny"
+    actions = [
+    "s3:PutObject"]
+    resources = ["${aws_s3_bucket.this.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = "*"
+    }
+
+    condition {
+      test     = "StringNotEquals"
+      values   = ["aws:kms"]
+      variable = "s3:x-amz-server-side-encryption"
+    }
+  }
+
+  statement {
+    sid       = "DenyUnEncryptedObjectActions"
+    effect    = "Deny"
+    actions   = ["s3:PutObject"]
+    resources = ["${aws_s3_bucket.this.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = "*"
+    }
+
+    condition {
+      test     = "Null"
+      values   = ["true"]
+      variable = "s3:x-amz-server-side-encryption"
+    }
+  }
+  statement {
+    sid       = "Allow bucket list"
+    effect    = "Allow"
+    actions   = ["s3:ListBucket"]
+    resources = [aws_s3_bucket.this.arn]
+
+    principals {
+      type        = "AWS"
+      identifiers = data.aws_caller_identity.current.account_id
+    }
+  }
+}
+
+data "aws_iam_policy_document" "no_header_policy" {
+
+  source_json = var.bucket_policy_source_json
+
+  statement {
+    sid       = "EnforceSSL"
+    effect    = "Deny"
+    actions   = ["s3:*Object"]
+    resources = ["${aws_s3_bucket.this.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = "*"
+    }
+
+    condition {
+      test     = "Bool"
+      values   = ["false"]
+      variable = "aws:SecureTransport"
+    }
+  }
+
+  statement {
+    sid       = "Allow bucket list"
+    effect    = "Allow"
+    actions   = ["s3:ListBucket"]
+    resources = [aws_s3_bucket.this.arn]
+
+    principals {
+      type        = "AWS"
+      identifiers = data.aws_caller_identity.current.account_id
+    }
+  }
+
 }
 
 

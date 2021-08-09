@@ -45,3 +45,9 @@ variable "enforce_server_side_encryption_header" {
   default     = true
   description = "Enforce clients to send s3:x-amz-server-side-encryption header"
 }
+
+variable "bucket_policy_source_json" {
+  type        = string
+  default     = ""
+  description = "Base bucket policy document."
+}
