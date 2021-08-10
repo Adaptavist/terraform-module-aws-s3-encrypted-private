@@ -68,8 +68,8 @@ data "aws_iam_policy_document" "default" {
     resources = ["${aws_s3_bucket.this.arn}/*"]
 
     principals {
+      identifiers = ["*"]
       type        = "AWS"
-      identifiers = "*"
     }
 
     condition {
