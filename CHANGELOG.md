@@ -1,3 +1,10 @@
+# [1.4.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.3.0...v1.4.0) (2021-08-10)
+
+
+### Features
+
+* triggering release of allowing base bucket policy ([1f88e8b](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/1f88e8b07d42f3a2fbeabd547a0f910fe761d8dd))
+
 # [1.3.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.2.0...v1.3.0) (2021-08-06)
 
 
