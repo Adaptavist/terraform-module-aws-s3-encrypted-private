@@ -49,8 +49,8 @@ data "aws_iam_policy_document" "default" {
     resources = ["${aws_s3_bucket.this.arn}/*"]
 
     principals {
+      identifiers = ["*"]
       type        = "AWS"
-      identifiers = "*"
     }
 
     condition {
@@ -68,8 +68,8 @@ data "aws_iam_policy_document" "default" {
     resources = ["${aws_s3_bucket.this.arn}/*"]
 
     principals {
+      identifiers = ["*"]
       type        = "AWS"
-      identifiers = "*"
     }
 
     condition {
@@ -104,7 +104,7 @@ data "aws_iam_policy_document" "default" {
 
     principals {
       type        = "AWS"
-      identifiers = data.aws_caller_identity.current.account_id
+      identifiers = [data.aws_caller_identity.current.account_id]
     }
   }
 }
@@ -121,8 +121,8 @@ data "aws_iam_policy_document" "no_header_policy" {
     resources = ["${aws_s3_bucket.this.arn}/*"]
 
     principals {
+      identifiers = ["*"]
       type        = "AWS"
-      identifiers = "*"
     }
 
     condition {
@@ -140,7 +140,7 @@ data "aws_iam_policy_document" "no_header_policy" {
 
     principals {
       type        = "AWS"
-      identifiers = data.aws_caller_identity.current.account_id
+      identifiers = [data.aws_caller_identity.current.account_id]
     }
   }
 
