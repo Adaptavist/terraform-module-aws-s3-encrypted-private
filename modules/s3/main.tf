@@ -87,7 +87,7 @@ data "aws_iam_policy_document" "default" {
 
     principals {
       type        = "AWS"
-      identifiers = "*"
+      identifiers = ["*"]
     }
 
     condition {
