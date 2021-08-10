@@ -31,6 +31,7 @@ module "s3" {
   kms_key_arn                           = module.kms.key_arn
   use_bucket_suffix_as_name             = var.use_bucket_suffix_as_name
   enforce_server_side_encryption_header = var.enforce_server_side_encryption_header
+  bucket_policy_source_json             = var.bucket_policy_source_json
 }
 
 module "s3-iam-roles" {
