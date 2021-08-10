@@ -109,6 +109,7 @@ data "aws_iam_policy_document" "default" {
   }
 }
 
+
 data "aws_iam_policy_document" "no_header_policy" {
 
   source_json = var.bucket_policy_source_json
