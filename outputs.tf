@@ -13,6 +13,11 @@ output "kms_key_arn" {
   description = "ARN of the CMK KMS key used for encryption S3 bucket data at rest"
 }
 
+output "kms_key_id" {
+  value       = module.kms.key_id
+  description = "Key id of the CMK KMS key used for encryption S3 bucket data at rest"
+}
+
 output "kms_key_alias_arn" {
   value       = module.kms.alias_arn
   description = "ARN of the CMK KMS key alias"
