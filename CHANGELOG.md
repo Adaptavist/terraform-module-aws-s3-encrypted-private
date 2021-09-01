@@ -1,3 +1,10 @@
+# [1.6.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.5.1...v1.6.0) (2021-09-01)
+
+
+### Features
+
+* added key id output ([de23915](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/de23915fa44668d99702bfafcfbf93b367f31454))
+
 ## [1.5.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.5.0...v1.5.1) (2021-08-10)
 
 
