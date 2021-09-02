@@ -19,6 +19,8 @@ module "kms" {
   enable_key_rotation = "true"
   admin_role_arns     = var.kms_admin_role_arns
   user_role_arns      = var.kms_user_role_arns
+  admin_services      = var.kms_admin_services
+  user_services       = var.kms_user_services
 }
 
 module "s3" {
