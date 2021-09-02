@@ -34,6 +34,18 @@ variable "kms_admin_role_arns" {
   default     = []
 }
 
+variable "kms_user_services" {
+  description = "List of AWS services that will be allowed to use the key for decryption"
+  type        = list
+  default     = []
+}
+
+variable "kms_admin_services" {
+  type        = list
+  description = "List of AWS services that will be allowed to administer the key"
+  default     = []
+}
+
 variable "use_bucket_suffix_as_name" {
   type        = bool
   default     = false

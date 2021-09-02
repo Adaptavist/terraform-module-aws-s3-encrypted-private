@@ -40,3 +40,15 @@ variable "admin_role_arns" {
   description = "List of IAM Role ARNs that will be allowed to administer the key"
   default     = []
 }
+
+variable "user_services" {
+  description = "List of AWS services that will be allowed to use the key for decryption"
+  type        = list
+  default     = []
+}
+
+variable "admin_services" {
+  type        = list
+  description = "List of AWS services that will be allowed to administer the key"
+  default     = []
+}
