@@ -1,3 +1,10 @@
+# [1.7.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.6.0...v1.7.0) (2021-09-02)
+
+
+### Features
+
+* allowing AWS services user/admin access to KMS key ([49a79ba](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/49a79baf11b99f2b2ba3590a18d77dafed662657))
+
 # [1.6.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.5.1...v1.6.0) (2021-09-01)
 
 
