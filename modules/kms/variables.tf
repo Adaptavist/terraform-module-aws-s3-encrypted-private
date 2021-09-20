@@ -52,3 +52,8 @@ variable "admin_services" {
   description = "List of AWS services that will be allowed to administer the key"
   default     = []
 }
+
+variable "kms_policy_source_json" {
+  type        = string
+  description = "Base kms policy document."
+}

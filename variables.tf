@@ -63,3 +63,9 @@ variable "bucket_policy_source_json" {
   default     = ""
   description = "Base bucket policy document."
 }
+
+variable "kms_policy_source_json" {
+  type        = string
+  default     = ""
+  description = "Base kms policy document."
+}

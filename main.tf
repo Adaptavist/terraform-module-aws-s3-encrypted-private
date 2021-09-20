@@ -9,18 +9,19 @@ module "labels" {
 }
 
 module "kms" {
-  source              = "./modules/kms"
-  namespace           = var.namespace
-  stage               = var.stage
-  name                = var.name
-  tags                = var.tags
-  description         = "${module.labels.id}-${var.bucket_suffix}-CMK"
-  key_alias           = "${module.labels.id}-${var.bucket_suffix}-CMK"
-  enable_key_rotation = "true"
-  admin_role_arns     = var.kms_admin_role_arns
-  user_role_arns      = var.kms_user_role_arns
-  admin_services      = var.kms_admin_services
-  user_services       = var.kms_user_services
+  source                 = "./modules/kms"
+  namespace              = var.namespace
+  stage                  = var.stage
+  name                   = var.name
+  tags                   = var.tags
+  description            = "${module.labels.id}-${var.bucket_suffix}-CMK"
+  key_alias              = "${module.labels.id}-${var.bucket_suffix}-CMK"
+  enable_key_rotation    = "true"
+  admin_role_arns        = var.kms_admin_role_arns
+  user_role_arns         = var.kms_user_role_arns
+  admin_services         = var.kms_admin_services
+  user_services          = var.kms_user_services
+  kms_policy_source_json = var.kms_policy_source_json
 }
 
 module "s3" {
