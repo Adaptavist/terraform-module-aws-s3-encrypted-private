@@ -1,3 +1,10 @@
+## [1.7.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.7.0...v1.7.1) (2021-09-20)
+
+
+### Bug Fixes
+
+* adding optional base kms policy ([0f0fa14](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/0f0fa144a20a117f6cb325c3adae8cdd0c53217e))
+
 # [1.7.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.6.0...v1.7.0) (2021-09-02)
 
 
