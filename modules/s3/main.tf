@@ -13,12 +13,7 @@ resource "aws_s3_bucket" "this" {
   #checkov:skip=CKV_AWS_52:MFA delete not required
   #checkov:skip=CKV_AWS_144:cross region replication not required
   bucket = var.use_bucket_suffix_as_name ? var.bucket_name : "${module.labels.id}-${var.bucket_name}"
-  acl    = "private"
   tags   = module.labels.tags
-
-  versioning {
-    enabled = true
-  }
 
   server_side_encryption_configuration {
     rule {
@@ -27,6 +22,18 @@ resource "aws_s3_bucket" "this" {
         sse_algorithm     = "aws:kms"
       }
     }
+  }
+}
+
+resource "aws_s3_bucket_acl" "this" {
+  bucket = aws_s3_bucket.this.id
+  acl    = "private"
+}
+
+resource "aws_s3_bucket_versioning" "this" {
+  bucket = aws_s3_bucket.this.id
+  versioning_configuration {
+    status = "Enabled"
   }
 }
 
