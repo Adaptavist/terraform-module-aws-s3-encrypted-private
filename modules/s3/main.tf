@@ -1,6 +1,6 @@
 module "labels" {
-  source  = "cloudposse/label/terraform"
-  version = "0.8.0"
+  source  = "cloudposse/label/null"
+  version = "0.25.0"
 
   namespace = var.namespace
   stage     = var.stage
@@ -13,19 +13,28 @@ resource "aws_s3_bucket" "this" {
   #checkov:skip=CKV_AWS_52:MFA delete not required
   #checkov:skip=CKV_AWS_144:cross region replication not required
   bucket = var.use_bucket_suffix_as_name ? var.bucket_name : "${module.labels.id}-${var.bucket_name}"
-  acl    = "private"
   tags   = module.labels.tags
+}
 
-  versioning {
-    enabled = true
+resource "aws_s3_bucket_acl" "this" {
+  bucket = aws_s3_bucket.this.id
+  acl    = "private"
+}
+
+resource "aws_s3_bucket_versioning" "this" {
+  bucket = aws_s3_bucket.this.id
+  versioning_configuration {
+    status = "Enabled"
   }
+}
 
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        kms_master_key_id = var.kms_key_arn
-        sse_algorithm     = "aws:kms"
-      }
+resource "aws_s3_bucket_server_side_encryoption_configuration" "this" {
+  bucket = aws_s3_bucket.this.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      kms_master_key_id = var.kms_key_arn
+      sse_algorithm     = "aws:kms"
     }
   }
 }
