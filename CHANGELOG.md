@@ -1,3 +1,22 @@
+# [2.0.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.7.1...v2.0.0) (2022-03-08)
+
+
+* Merged in aws_upgrade (pull request #16) ([49eb0be](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/49eb0be1f7ae7c2e434aeb8835c3099cd1782b75)), closes [#16](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/issue/16)
+
+
+### Features
+
+* label module change ([f5a365c](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/f5a365c6c77fe4e86d4844815873178988c1ab71))
+
+
+### BREAKING CHANGES
+
+* acl and versioning resources
+
+Approved-by: Lilly Holden
+Approved-by: Dominic Martino
+Approved-by: Ashok Singh
+
 ## [1.7.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.7.0...v1.7.1) (2021-09-20)
 
 
