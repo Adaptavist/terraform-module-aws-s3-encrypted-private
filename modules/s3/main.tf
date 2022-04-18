@@ -28,7 +28,7 @@ resource "aws_s3_bucket_versioning" "this" {
   }
 }
 
-resource "aws_s3_bucket_server_side_encryoption_configuration" "this" {
+resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
   bucket = aws_s3_bucket.this.id
 
   rule {
