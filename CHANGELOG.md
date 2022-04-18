@@ -1,3 +1,10 @@
+## [2.0.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.0.0...v2.0.1) (2022-04-18)
+
+
+### Bug Fixes
+
+* correcting resource name ([055017a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/055017af9b874c3c4a2090b9bc031d47ffb404a1))
+
 # [2.0.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v1.7.1...v2.0.0) (2022-03-08)
 
 
