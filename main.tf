@@ -35,6 +35,7 @@ module "s3" {
   use_bucket_suffix_as_name             = var.use_bucket_suffix_as_name
   enforce_server_side_encryption_header = var.enforce_server_side_encryption_header
   bucket_policy_source_json             = var.bucket_policy_source_json
+  bucket_key_enabled                    = var.bucket_key_enabled
 }
 
 module "s3-iam-roles" {

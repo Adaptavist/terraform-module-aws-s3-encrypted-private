@@ -69,3 +69,9 @@ variable "kms_policy_source_json" {
   default     = ""
   description = "Base kms policy document."
 }
+
+variable "bucket_key_enabled" {
+  type        = bool
+  default     = true
+  description = "Enable S3 bucket key (used to reduce KMS costs)"
+}

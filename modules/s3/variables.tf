@@ -37,3 +37,7 @@ variable "enforce_server_side_encryption_header" {
 variable "bucket_policy_source_json" {
   type = string
 }
+
+variable "bucket_key_enabled" {
+  type = bool
+}
