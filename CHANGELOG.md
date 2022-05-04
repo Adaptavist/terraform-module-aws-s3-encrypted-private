@@ -1,3 +1,15 @@
+# [2.1.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.0.1...v2.1.0) (2022-05-04)
+
+
+### Bug Fixes
+
+* enabled the s3 bucket key config ([3d3ef73](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/3d3ef73e74a133a51dd342616e13ff48c460d404))
+
+
+### Features
+
+* using bucket key by default ([56c90da](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/56c90da773bdb3480c36a5152885408620f7b036))
+
 ## [2.0.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.0.0...v2.0.1) (2022-04-18)
 
 
