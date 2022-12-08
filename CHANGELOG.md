@@ -1,3 +1,10 @@
+## [2.1.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.0...v2.1.1) (2022-12-08)
+
+
+### Bug Fixes
+
+* trigger a new release ([3e565a2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/3e565a2dcf29e6ffcadc95f054b3ebad4bac4564))
+
 # [2.1.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.0.1...v2.1.0) (2022-05-04)
 
 
