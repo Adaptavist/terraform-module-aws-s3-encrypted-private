@@ -36,6 +36,7 @@ module "s3" {
   enforce_server_side_encryption_header = var.enforce_server_side_encryption_header
   bucket_policy_source_json             = var.bucket_policy_source_json
   bucket_key_enabled                    = var.bucket_key_enabled
+  lifecycle_rule                        = var.lifecycle_rule
 }
 
 module "s3-iam-roles" {

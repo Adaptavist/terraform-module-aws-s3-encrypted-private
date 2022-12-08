@@ -75,3 +75,14 @@ variable "bucket_key_enabled" {
   default     = true
   description = "Enable S3 bucket key (used to reduce KMS costs)"
 }
+
+variable "lifecycle_rule" {
+  type = map(object({
+    prefix = string
+    expiry = number
+  }))
+  default     = {}
+  description = "Bucket lifecycle prefix and expiry date"
+}
+
+

@@ -41,3 +41,11 @@ variable "bucket_policy_source_json" {
 variable "bucket_key_enabled" {
   type = bool
 }
+
+variable "lifecycle_rule" {
+  type = map(object({
+    prefix = string
+    expiry = number
+  }))
+  default = {}
+}

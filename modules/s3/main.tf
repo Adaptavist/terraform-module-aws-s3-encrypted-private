@@ -28,6 +28,27 @@ resource "aws_s3_bucket_versioning" "this" {
   }
 }
 
+resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration" {
+  count  = length(var.lifecycle_rule) > 0 ? 1 : 0
+  bucket = aws_s3_bucket.this.id
+
+  dynamic "rule" {
+    for_each = var.lifecycle_rule
+
+    content {
+      id     = "${rule.value.prefix} expiry in ${rule.value.expiry} days"
+      status = "Enabled"
+
+      filter {
+        prefix = rule.value.prefix
+      }
+      expiration {
+        days = rule.value.expiry
+      }
+    }
+  }
+}
+
 resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
   bucket = aws_s3_bucket.this.id
 
