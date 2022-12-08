@@ -82,7 +82,7 @@ variable "lifecycle_rule" {
     expiry = number
   }))
   default     = {}
-  description = "Bucket lifecycle prefix and expiry date"
+  description = "Bucket lifecycle prefix and expiry date."
 }
 
 
