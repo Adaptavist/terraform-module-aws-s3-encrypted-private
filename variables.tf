@@ -55,7 +55,7 @@ variable "use_bucket_suffix_as_name" {
 variable "enforce_server_side_encryption_header" {
   type        = bool
   default     = true
-  description = "Enforce clients to send s3:x-amz-server-side-encryption header"
+  description = "Enforce clients to send s3:x-amz-server-side-encryption header."
 }
 
 variable "bucket_policy_source_json" {
