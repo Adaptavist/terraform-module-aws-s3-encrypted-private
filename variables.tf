@@ -77,12 +77,9 @@ variable "bucket_key_enabled" {
 }
 
 variable "lifecycle_rule" {
-  type = map(object({
-    prefix = string
-    expiry = number
-  }))
-  default     = {}
   description = "Bucket lifecycle prefix and expiry date."
+  type = map(number)
+  default = {}
 }
 
 

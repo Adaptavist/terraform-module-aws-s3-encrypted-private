@@ -36,14 +36,14 @@ resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration
     for_each = var.lifecycle_rule
 
     content {
-      id     = "${rule.value.prefix} expiry in ${rule.value.expiry} days"
+      id     = "${rule.key} expiry in ${rule.value} days"
       status = "Enabled"
 
       filter {
-        prefix = rule.value.prefix
+        prefix = rule.key
       }
       expiration {
-        days = rule.value.expiry
+        days = rule.value
       }
     }
   }
