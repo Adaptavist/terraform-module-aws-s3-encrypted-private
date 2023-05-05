@@ -1,3 +1,10 @@
+## [2.1.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.2...v2.1.3) (2023-05-05)
+
+
+### Bug Fixes
+
+* removing bucket acl as no longer needed ([d9e922a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/d9e922a52083ec626f3be4ba036c308b33029dd2))
+
 ## [2.1.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.1...v2.1.2) (2023-01-09)
 
 
