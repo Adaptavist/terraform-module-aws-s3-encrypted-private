@@ -46,7 +46,7 @@ resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration
         days = rule.value
       }
       noncurrent_version_expiration {
-        noncurrent_days = rule.value
+        noncurrent_days = 1
       }
     }
   }
