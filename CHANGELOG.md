@@ -1,3 +1,11 @@
+## [2.1.4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.3...v2.1.4) (2023-05-16)
+
+
+### Bug Fixes
+
+* delete versioned objects ([4741804](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/474180453197b0e36ea9912030244dbba13d43ed))
+* set noncurrent_days for version deletion to be 1 day ([acc0d8f](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/acc0d8f65176b948a1eb495007a87f17a8f720ba))
+
 ## [2.1.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.2...v2.1.3) (2023-05-05)
 
 
