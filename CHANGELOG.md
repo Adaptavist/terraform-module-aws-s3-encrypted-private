@@ -1,3 +1,10 @@
+## [2.1.5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.4...v2.1.5) (2023-06-14)
+
+
+### Bug Fixes
+
+* now using override_policy_documents for source_json ([7e2ed2a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/7e2ed2a66da1182d30f043fbffeec066925d39ae))
+
 ## [2.1.4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.3...v2.1.4) (2023-05-16)
 
 
