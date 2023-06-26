@@ -47,3 +47,8 @@ variable "lifecycle_rule" {
   type = map(number)
   default = {}
 }
+variable "log_expiration_days" {
+  description = "The number of days after which the object in the bucket expires"
+  type        = number
+  default     = null
+}
