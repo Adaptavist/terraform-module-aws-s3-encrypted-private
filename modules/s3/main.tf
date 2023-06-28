@@ -45,6 +45,24 @@ resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration
       }
     }
   }
+  dynamic "rule" {
+    for_each = var.log_expiration_days != null ? [1] : []
+
+    content {
+      id      = "log_expiration"
+      status  = "Enabled"
+
+      expiration {
+        days = var.log_expiration_days
+      }
+
+      noncurrent_version_expiration {
+        noncurrent_days = var.log_expiration_days
+      }
+    }
+  }
+
+  depends_on = [aws_s3_bucket.this]
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
