@@ -1,3 +1,11 @@
+## [2.1.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.5...v2.1.6) (2023-06-28)
+
+
+### Bug Fixes
+
+* add optional data expiration policy ([47e9b15](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/47e9b1578a702bc2146957cbfaea7553581364b2))
+* updated README ([e0586b5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/e0586b5bee7f36560791354fd3e68e0fae7ee0e3))
+
 ## [2.1.5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.4...v2.1.5) (2023-06-14)
 
 
