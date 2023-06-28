@@ -1,3 +1,10 @@
+## [2.1.7](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.6...v2.1.7) (2023-06-28)
+
+
+### Bug Fixes
+
+* set var.log_expiration_days default to 30 ([1d5442e](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/1d5442e4ff8f2d71ee3d2c829398acf4bcc58522))
+
 ## [2.1.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.5...v2.1.6) (2023-06-28)
 
 
