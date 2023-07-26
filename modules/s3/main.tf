@@ -87,7 +87,7 @@ resource "aws_s3_bucket_policy" "this" {
 
 data "aws_iam_policy_document" "default" {
 
-  source_json = var.bucket_policy_source_json
+  source_policy_documents = var.bucket_policy_source_json
 
   statement {
     sid       = "EnforceSSL"
