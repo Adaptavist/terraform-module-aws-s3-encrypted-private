@@ -1,3 +1,10 @@
+## [2.1.8](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.7...v2.1.8) (2023-07-26)
+
+
+### Bug Fixes
+
+* lock aws provider version to ~> 4.0 ([c7f9189](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/c7f9189ea019ac4a00d592390f6905cbae8af017))
+
 ## [2.1.7](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.6...v2.1.7) (2023-06-28)
 
 
