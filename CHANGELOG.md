@@ -1,3 +1,10 @@
+## [3.0.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.0...v3.0.1) (2023-07-26)
+
+
+### Bug Fixes
+
+* variable type error: ([38a112a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/38a112ad5a4dffa96d0c74fb9ce04f6e30c51479))
+
 # [3.0.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.8...v3.0.0) (2023-07-26)
 
 
