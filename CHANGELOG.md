@@ -1,3 +1,13 @@
+# [3.0.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.8...v3.0.0) (2023-07-26)
+
+
+* fix!: upgrade & lock aws provider version to ~> 5.0 ([dd71a1f](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/dd71a1f3e9de06456b4113f7898104938283eed0))
+
+
+### BREAKING CHANGES
+
+* update deprecated configuration to aws_iam_policy_document
+
 ## [2.1.8](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v2.1.7...v2.1.8) (2023-07-26)
 
 
