@@ -1,3 +1,10 @@
+## [3.0.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.1...v3.0.2) (2023-10-16)
+
+
+### Bug Fixes
+
+* updating TF provider config ([0994133](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/09941339dac6c2e660685fc06ea1423f22c3b7ed))
+
 ## [3.0.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.0...v3.0.1) (2023-07-26)
 
 
