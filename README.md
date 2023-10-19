@@ -20,7 +20,7 @@ This module defines a private encrypted S3 bucket. Created resources are:
 | kms_user_services   | string |         |          | List of AWS services that will be allowed to use the key for decryption
 | kms_admin_services  | string |         |          | List of AWS services that will be allowed to administer the key
 | lifecycle_rule      | map    |         |          | Enables lifecycle rule for objects. Requires prefix and expiry date
-| log_expiration_days | number |    30   |          | The number of days after which the object in the bucket expires. If not required must be set to 'null'.
+| log_expiration_days | number |  null   |          | The number of days after which the object in the bucket expires.
 | namespace           | string |         | ✓        | Namespace used for labeling resources
 | name                | string |         | ✓        | Name of the module / resources
 | stage               | string |         | ✓        | What staga are the resources for? staging, production?
