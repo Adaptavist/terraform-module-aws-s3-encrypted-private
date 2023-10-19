@@ -1,3 +1,11 @@
+## [3.0.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.2...v3.0.3) (2023-10-19)
+
+
+### Bug Fixes
+
+* log expiry days reverted back to null ([cfddda4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/cfddda4434ad26ecb7afea1444390c72d00d8cc5))
+* log expiry days reverted back to null ([a32919a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/a32919ac69555400f8c4b9ec32e055638f5eb1dc))
+
 ## [3.0.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.1...v3.0.2) (2023-10-16)
 
 
