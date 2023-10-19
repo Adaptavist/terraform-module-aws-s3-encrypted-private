@@ -1,3 +1,11 @@
+## [3.0.4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.3...v3.0.4) (2023-10-19)
+
+
+### Bug Fixes
+
+* changed var type ([e85fafe](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/e85fafe41e809dc3eaa66f0cb805f69b640d0947))
+* correct attribute value type in terraform config ([8ebb631](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/8ebb63158bb958bef69f0fce183bc6ff7ba429af))
+
 ## [3.0.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.2...v3.0.3) (2023-10-19)
 
 
