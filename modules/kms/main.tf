@@ -20,7 +20,7 @@ resource "aws_kms_key" "this" {
 data "aws_iam_policy_document" "this" {
   #checkov:skip=CKV_AWS_111:resource not known at this point
   #checkov:skip=CKV_AWS_109:resource not known at this point
-  source_policy_documents = var.kms_policy_source_json
+  source_policy_documents = [var.kms_policy_source_json]
   statement {
     sid    = "Enable IAM User Permissions"
     effect = "Allow"
