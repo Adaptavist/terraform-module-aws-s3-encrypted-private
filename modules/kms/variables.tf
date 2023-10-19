@@ -54,6 +54,6 @@ variable "admin_services" {
 }
 
 variable "kms_policy_source_json" {
-  type        = string
+  type        = list(string)
   description = "Base kms policy document."
 }
