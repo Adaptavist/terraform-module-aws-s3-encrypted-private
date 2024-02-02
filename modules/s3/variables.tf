@@ -52,3 +52,14 @@ variable "log_expiration_days" {
   type        = number
   default     = 30
 }
+
+variable "bucket_versioning" {
+  description = "Bucket versioning configuration."
+  type        = string
+  default     = "Enabled"
+
+  validation {
+    condition     = contains(["Enabled", "Suspended", "Disabled"], var.bucket_versioning)
+    error_message = "bucket_versioning must be one of the following: Enabled, Suspended or Disabled."
+  }
+}

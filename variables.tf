@@ -81,8 +81,20 @@ variable "lifecycle_rule" {
   type = map(number)
   default = {}
 }
+
 variable "log_expiration_days" {
   description = "The number of days after which the object in the bucket expires"
   type        = number
   default     = null
+}
+
+variable "bucket_versioning" {
+  description = "Bucket versioning configuration."
+  type        = string
+  default     = "Enabled"
+
+  validation {
+    condition     = contains(["Enabled", "Suspended", "Disabled"], var.bucket_versioning)
+    error_message = "bucket_versioning must be one of the following: Enabled, Suspended or Disabled."
+  }
 }

@@ -37,6 +37,7 @@ module "s3" {
   bucket_policy_source_json             = var.bucket_policy_source_json
   bucket_key_enabled                    = var.bucket_key_enabled
   lifecycle_rule                        = var.lifecycle_rule
+  bucket_versioning                     = var.bucket_versioning
 }
 
 module "s3-iam-roles" {
