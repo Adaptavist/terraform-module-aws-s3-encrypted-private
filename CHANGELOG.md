@@ -1,3 +1,10 @@
+## [3.0.5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.4...v3.0.5) (2024-02-02)
+
+
+### Bug Fixes
+
+* add variable to enable bucket versioning ([82f915a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/82f915a22fd931192350a3498ccfe25512fbb2be))
+
 ## [3.0.4](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.3...v3.0.4) (2023-10-19)
 
 
