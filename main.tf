@@ -38,6 +38,7 @@ module "s3" {
   bucket_key_enabled                    = var.bucket_key_enabled
   lifecycle_rule                        = var.lifecycle_rule
   bucket_versioning                     = var.bucket_versioning
+  log_expiration_days                   = var.log_expiration_days
 }
 
 module "s3-iam-roles" {
