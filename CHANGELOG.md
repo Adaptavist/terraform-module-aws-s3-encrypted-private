@@ -1,3 +1,10 @@
+## [3.0.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.5...v3.0.6) (2024-04-30)
+
+
+### Bug Fixes
+
+* pass var.log_expiration_days into the inner module ([df9605a](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/df9605a74ea8bf7fa9a961537753b03961a182bf))
+
 ## [3.0.5](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.4...v3.0.5) (2024-02-02)
 
 
