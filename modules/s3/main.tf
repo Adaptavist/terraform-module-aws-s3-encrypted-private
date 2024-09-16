@@ -14,6 +14,7 @@ resource "aws_s3_bucket" "this" {
   #checkov:skip=CKV_AWS_144:cross region replication not required
   bucket = var.use_bucket_suffix_as_name ? var.bucket_name : "${module.labels.id}-${var.bucket_name}"
   tags   = module.labels.tags
+  force_destroy = var.should_force_destroy
 }
 
 resource "aws_s3_bucket_versioning" "this" {
