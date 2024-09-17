@@ -39,6 +39,7 @@ module "s3" {
   lifecycle_rule                        = var.lifecycle_rule
   bucket_versioning                     = var.bucket_versioning
   log_expiration_days                   = var.log_expiration_days
+  force_destroy                         = var.should_force_destroy
 }
 
 module "s3-iam-roles" {

@@ -63,3 +63,9 @@ variable "bucket_versioning" {
     error_message = "bucket_versioning must be one of the following: Enabled, Suspended or Disabled."
   }
 }
+
+variable "should_force_destroy" {
+  description = "Whether to force destroy the S3 bucket contents when the bucket is destroyed."
+  type        = bool
+  default     = false
+}
