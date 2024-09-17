@@ -1,3 +1,11 @@
+# [3.1.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.6...v3.1.0) (2024-09-17)
+
+
+### Features
+
+* Added should_force_destroy variable. ([6fdbc26](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/6fdbc262eefe6d72f3e0afb103a5e67eb81e64cd))
+* Added should_force_destroy variable. ([13dae64](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/13dae64df0465d602635adffd10f52ccde262a7b))
+
 ## [3.0.6](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.5...v3.0.6) (2024-04-30)
 
 
