@@ -1,3 +1,10 @@
+## [3.1.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.1.0...v3.1.1) (2024-09-19)
+
+
+### Bug Fixes
+
+* Changed name sub-module. ([bdd1414](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/bdd14142a2386cd0f933880c84e53857b82ad3d9))
+
 # [3.1.0](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.0.6...v3.1.0) (2024-09-17)
 
 
