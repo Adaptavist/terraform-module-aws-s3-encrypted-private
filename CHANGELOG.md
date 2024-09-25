@@ -1,3 +1,10 @@
+## [3.1.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.1.1...v3.1.2) (2024-09-25)
+
+
+### Bug Fixes
+
+* adding count back into lifecycle rules resource for now ([f0881bb](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/f0881bb29e376a957390a1edcfc86570110a8b05))
+
 ## [3.1.1](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.1.0...v3.1.1) (2024-09-19)
 
 
