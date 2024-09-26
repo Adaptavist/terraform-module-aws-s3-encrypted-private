@@ -50,7 +50,6 @@ variable "lifecycle_rule" {
 variable "log_expiration_days" {
   description = "The number of days after which the object in the bucket expires"
   type        = number
-  default     = 30
 }
 
 variable "bucket_versioning" {
