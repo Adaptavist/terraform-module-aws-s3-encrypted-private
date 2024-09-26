@@ -24,8 +24,9 @@ resource "aws_s3_bucket_versioning" "this" {
   }
 }
 
-resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration" {
-  count  = length(var.lifecycle_rule) > 0 ? 1 : 0
+# Only create if log_expiration_days is empty and lifecycle_rule is set
+resource "aws_s3_bucket_lifecycle_configuration" "prefix_bucket_lifecycle_configuration" {
+  count  = var.log_expiration_days == null && length(var.lifecycle_rule) > 0 ? 1 : 0
   bucket = aws_s3_bucket.this.id
 
   dynamic "rule" {
@@ -46,6 +47,14 @@ resource "aws_s3_bucket_lifecycle_configuration" "bucket_lifecycle_configuration
       }
     }
   }
+  depends_on = [aws_s3_bucket.this]
+}
+
+# Only create if log_expiration_days is set and lifecycle_rule is empty
+resource "aws_s3_bucket_lifecycle_configuration" "all_obj_bucket_lifecycle_configuration" {
+  count  = var.log_expiration_days != null && length(var.lifecycle_rule) == 0 ? 1 : 0
+  bucket = aws_s3_bucket.this.id
+
   dynamic "rule" {
     for_each = var.log_expiration_days != null ? [1] : []
 
