@@ -1,3 +1,10 @@
+## [3.1.3](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.1.2...v3.1.3) (2024-09-26)
+
+
+### Bug Fixes
+
+* separate lifecycle configs between prefixes and all obj ([730099d](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/commits/730099d8718ee8baa57235ab4b3ffda252460aba))
+
 ## [3.1.2](http://bitbucket.org/adaptavistlabs/module-aws-s3-encrypted-private/compare/v3.1.1...v3.1.2) (2024-09-25)
 
 
