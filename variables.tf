@@ -95,7 +95,7 @@ variable "bucket_versioning" {
 
   validation {
     condition     = contains(["Enabled", "Suspended", "Disabled"], var.bucket_versioning)
-    error_message = "bucket_versioning must be one of the following: Enabled, Suspended or Disabled."
+    error_message = "The bucket_versioning must be one of the following: Enabled, Suspended or Disabled."
   }
 }
 
